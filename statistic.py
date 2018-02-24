@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 
 import os
+import parameters as P
 
 from numpy import *
 from decimal import Decimal
@@ -47,12 +48,12 @@ def get_convergence(x):
 
 def write_statistical(mean, sd, worst, best, name):
 
-	dirDataset = "Fitness/"
+	dirDataset = "Fitness/" + P.function.capitalize()
 
 	if(not os.path.exists(dirDataset)):
 		os.makedirs(dirDataset)
 
-	deepDir= "StatisticalData_" + name + ".txt" 
+	deepDir= "/StatisticalData_" + name + ".txt" 
 
 	finalDir = dirDataset + deepDir
 
@@ -67,7 +68,7 @@ def write_statistical(mean, sd, worst, best, name):
 
 def write_convergence(y):
 
-	name = "Fitness/Convergence.txt"
+	name = "Fitness/" + P.function.capitalize() + "/Convergence.txt"
 
 	file = open(name, "w")
 

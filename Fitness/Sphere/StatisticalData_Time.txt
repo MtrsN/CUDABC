@@ -1,0 +1,4 @@
+Mean Time: 2.4578633086419757
+Standart Derivation Time: 0.6513536637560321
+Best Time Found: 1.9972867160493828
+Worst Time Found: 2.918439901234568

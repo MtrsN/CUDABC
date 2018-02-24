@@ -13,7 +13,7 @@ def ABC_classic_function(bee, neigh, random_weight):
 @cuda.jit(debug=True)
 def ABC_initialization(hive, fitness, global_fitness):
 
-	i = cuda.threadIdx.x
+	i = cuda.blockIdx.x * cuda.blockDim.x + cuda.threadIdx.x
 
 	if(i < bees):
 		fitness[i] = fit.fitness(hive[i])

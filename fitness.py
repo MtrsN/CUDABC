@@ -1,19 +1,27 @@
-from numba import cuda
-import numpy as np
 
-# ------------------------ Sphere Function ------------------------ #
-@cuda.jit(device= True)
-def fitness(x):
+import parameters as P
+import importlib
 
-	sm = 0.0
+# ------------------------ Function Parameters ------------------------ #
 
-	for i in range(0, len(x)):
-		sm += x[i] * x[i]
+function_dir 			= "Evaluate." + P.function.lower()
 
-	return sm
+function_fitness 		= "get_fitness"
 
-def get_dim():
-	return 30
+function_bounds 		= "get_bounds"
 
-def get_bounds():
-	return 100, -100
+function_dim 			= "get_dim"
+
+function_constrained 	= "is_constrained"
+
+function_restrictions 	= "get_restrictions"
+
+# ----------------------------- Function ------------------------------ #
+
+fitness 		= getattr(importlib.import_module(function_dir), function_fitness)
+
+get_dim 		= getattr(importlib.import_module(function_dir), function_dim)
+
+get_bounds		= getattr(importlib.import_module(function_dir), function_bounds)
+
+
