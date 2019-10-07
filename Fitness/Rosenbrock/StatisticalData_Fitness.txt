@@ -1,4 +1,0 @@
-Mean Fitness: 74.37746396980373
-Standart Derivation Fitness: 4.397396912983854
-Best Fitness Found: 71.26803479306406
-Worst Fitness Found: 77.48689314654341
