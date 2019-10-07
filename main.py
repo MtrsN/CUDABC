@@ -18,6 +18,8 @@ if __name__ == '__main__':
 
 	# runs
 	for run in range(0, cu.runs):
+        
+		print("Starting run %d" % (run + 1), end= "\n\n")
 
 		np.random.seed( (run + run) * (run + run) )
 

@@ -13,3 +13,5 @@ Define the parameters in "parameters.py" and run the main file
     2) At the same time, Numba CUDA kernels were not capable to use kernels inside classes, this is why each problem was defined in a file without a basic structure
 
     3) This is not the version used in the paper, the original version in CUDA C was lost 
+
+    4) After running main.py, when the program stops, one folder will be created with the algorithm statistical information

@@ -1,7 +1,7 @@
 # Parameters
-bees = 1024
+bees = 512
 
-limit_solutions = 80
+limit_solutions = 100
 
 generations = 10000
 
