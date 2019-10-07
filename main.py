@@ -42,7 +42,7 @@ if __name__ == '__main__':
 		limit_index = np.random.uniform(lower_bound, upper_bound, size=(cu.generations, cu.bees))
 
 		# Globals
-		global_fitness = np.array([9999999999] * cu.generations).astype(np.float64)
+		global_fitness = np.array([9999999999999999] * cu.generations).astype(np.float64)
 		global_solution = np.zeros(dim)
 
 		# Kernels

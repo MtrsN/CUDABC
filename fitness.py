@@ -4,7 +4,7 @@ import importlib
 
 # ------------------------ Function Parameters ------------------------ #
 
-function_dir 			= "Evaluate." + P.function.lower()
+function_dir 			= "problems." + P.function.lower()
 
 function_fitness 		= "get_fitness"
 
