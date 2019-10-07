@@ -75,4 +75,4 @@ if __name__ == '__main__':
 	print("Mean Time: %.6f seconds" % (stt.get_mean(time_statistic)))
 	print("Mean F(x): %.6f fitness" % (stt.get_mean(data_statistic)))
 
-	#stt.generate_plot(stt.get_convergence(curve_statistic))
+	stt.generate_plot(stt.get_convergence(curve_statistic))
