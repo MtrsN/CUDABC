@@ -1,9 +1,15 @@
-# CUDABC
+# CUDABC - Artificial Bee Colony on GPU
 
-Implementation of Artificial Bee Colony Algorithm over under General Purpose Graphics Processing Unit (GPGPU) Architeture.
+Implementation of [Artificial Bee Colony Algorithm under General Purpose Graphics Processing Unit](http://www.sbpo2017.iltc.br/pdf/169439.pdf) architeture.
 
-Numba Version: 0.36.2
-Numpy Version: 1.14.0
-Matplotlib Version: 2.1.0
+## Usage
 
-Paper URL: http://www.sbpo2017.iltc.br/pdf/169439.pdf
+Define the parameters in "parameters.py" and run the main file
+
+## Notes about the implementation
+
+    1) When this code was created (2017), instead of generating the random variables inside each CUDA kernel, it was faster to generate using NumPy library and send them to the GPU;
+
+    2) At the same time, Numba CUDA kernels were not capable to use kernels inside classes, this is why each problem was defined in a file without a basic structure
+
+    3) This is not the version used in the paper, the original version in CUDA C was lost 
